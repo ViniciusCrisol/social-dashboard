@@ -4,6 +4,7 @@ export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    outline: 0;
     box-sizing: border-box;
   }
 
@@ -12,7 +13,6 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     background-color: ${({ theme }) => theme.colors.background};
   }
-
 
   *, input, button {
     font-family: Roboto, sans-serif;
