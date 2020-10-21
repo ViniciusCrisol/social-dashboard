@@ -2,15 +2,23 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
+import { useTheme } from '../hooks/useTheme';
 import GlobalStyles from '../styles/global';
-import theme from '../styles/theme';
+import AppProvider from '../hooks';
+
+import darkTheme from '../styles/themes/dark';
+import lightTheme from '../styles/themes/light';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  const { theme } = useTheme();
+
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-      <GlobalStyles />
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <Component {...pageProps} />
+        <GlobalStyles />
+      </ThemeProvider>
+    </AppProvider>
   );
 };
 
