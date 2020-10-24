@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 45px 30px;
+  padding: 45px 30px 120px;
+  border-radius: 0 0 30px 30px;
   background: ${({ theme }) => theme.colors.header};
 `;
 
@@ -26,7 +27,8 @@ export const Content = styled.div`
     align-items: center;
 
     > span {
-      margin-right: 10px;
+      margin-right: 5px;
+      width: fit-content;
 
       font-size: 14px;
       font-weight: bold;

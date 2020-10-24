@@ -1,0 +1,28 @@
+{
+  "general": [
+    {
+      "socialMedia": "facebook",
+      "userName": "@crisol",
+      "followers": 1987,
+      "todayFollowers": 12
+    },
+    {
+      "socialMedia": "twitter",
+      "userName": "@crisol",
+      "followers": 1121,
+      "todayFollowers": 99
+    },
+    {
+      "socialMedia": "instagram",
+      "userName": "@crisol",
+      "followers": 110000,
+      "todayFollowers": 1099
+    },
+    {
+      "socialMedia": "youtube",
+      "userName": "@crisol",
+      "followers": 8265,
+      "todayFollowers": -3
+    }
+  ]
+}

@@ -1,23 +1,23 @@
 import React from 'react';
 import Head from 'next/head';
 
-import { useTheme } from '../hooks/useTheme';
+import data from '../../data.json';
 
-import { Container } from '../styles/pages/Home';
+import HeaderCard from '../components/HeaderCard';
+import { Container, Header } from '../styles/pages/Home';
 
 const Home: React.FC = () => {
-  const { toggleTheme } = useTheme();
-
   return (
     <Container>
       <Head>
         <title>Home</title>
       </Head>
 
-      <div>
-        <h1>Página inicial</h1>
-        <button onClick={toggleTheme}>Trocar tema</button>
-      </div>
+      <Header>
+        {data.general.map((socialMedia: IHeaderCard) => (
+          <HeaderCard key={socialMedia.socialMedia} data={socialMedia} />
+        ))}
+      </Header>
     </Container>
   );
 };
