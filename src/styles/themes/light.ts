@@ -4,7 +4,7 @@ const theme = {
     primary: '#f0f3fa',
     background: '#ffffff',
     header: '#f8f9fe',
-    headerLabel: '#898d98',
+    label: '#898d98',
     green: '#30867b',
     red: '#831e2c',
   },

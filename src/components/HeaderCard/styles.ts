@@ -28,6 +28,7 @@ export const Container = styled.div<IContainerProps>`
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
 
   overflow: hidden;
   position: relative;
@@ -37,11 +38,24 @@ export const Container = styled.div<IContainerProps>`
     align-items: center;
 
     > svg {
-      margin-right: 5px;
+      margin-right: 10px;
     }
 
     > strong {
-      color: ${({ theme }) => theme.colors.headerLabel};
+      color: ${({ theme }) => theme.colors.label};
+    }
+  }
+
+  .numbers {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.label};
+
+    h1 {
+      font-size: 52px;
+      letter-spacing: 1px;
     }
   }
 

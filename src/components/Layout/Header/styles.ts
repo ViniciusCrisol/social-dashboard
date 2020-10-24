@@ -19,7 +19,7 @@ export const Content = styled.div`
   }
 
   strong {
-    color: ${({ theme }) => theme.colors.headerLabel};
+    color: ${({ theme }) => theme.colors.label};
   }
 
   .switch-container {
