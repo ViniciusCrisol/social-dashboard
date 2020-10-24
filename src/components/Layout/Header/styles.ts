@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 45px 30px 120px;
+  padding: 45px 0 120px;
   border-radius: 0 0 30px 30px;
   background: ${({ theme }) => theme.colors.header};
 `;
 
 export const Content = styled.div`
   margin: 0 auto;
+  padding: 0 30px;
   max-width: 1280px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 660px) {
+    flex-direction: column;
+  }
 
   h1 {
     font-size: 28px;
@@ -33,6 +38,18 @@ export const Content = styled.div`
       font-size: 14px;
       font-weight: bold;
       text-transform: capitalize;
+    }
+  }
+
+  @media (max-width: 660px) {
+    flex-direction: column;
+    align-items: unset;
+
+    .switch-container {
+      width: 100%;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid ${({ theme }) => theme.colors.label};
     }
   }
 `;

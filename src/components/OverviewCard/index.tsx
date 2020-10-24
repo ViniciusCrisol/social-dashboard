@@ -10,11 +10,11 @@ import DownIcon from '../../assets/icon-down.svg';
 
 import { Container } from './styles';
 
-interface IHeaderCardProps {
-  data: IHeaderCard;
+interface IOverviewCardProps {
+  data: IOverviewCard;
 }
 
-const HeaderCard: React.FC<IHeaderCardProps> = ({ data }) => {
+const OverviewCard: React.FC<IOverviewCardProps> = ({ data }) => {
   const SocialMediaIcon: React.FC = () => {
     switch (data.socialMedia) {
       case 'facebook':
@@ -29,28 +29,25 @@ const HeaderCard: React.FC<IHeaderCardProps> = ({ data }) => {
   };
 
   return (
-    <Container
-      socialMedia={data.socialMedia}
-      footerColor={data.todayFollowers < 0 ? 'red' : 'green'}
-    >
+    <Container labelColor={data.percent < 0 ? 'red' : 'green'}>
       <div className="header">
+        <strong>{data.label}</strong>
         <SocialMediaIcon />
-        <strong>{data.userName}</strong>
-      </div>
-
-      <div className="numbers">
-        <h1>{formatNumber(data.followers)}</h1>
-        {data.socialMedia === 'youtube' ? 'subscribes' : 'followers'}
       </div>
 
       <div className="footer">
-        {data.todayFollowers < 0 ? <DownIcon /> : <UpIcon />}
-        {data.todayFollowers < 0
-          ? data.todayFollowers.toString().split('-')[1]
-          : data.todayFollowers}
+        <h1>{formatNumber(data.quantity)}</h1>
+
+        <span>
+          {data.percent < 0 ? <DownIcon /> : <UpIcon />}
+          {data.percent < 0
+            ? data.percent.toString().split('-')[1]
+            : data.percent}
+          %
+        </span>
       </div>
     </Container>
   );
 };
 
-export default HeaderCard;
+export default OverviewCard;

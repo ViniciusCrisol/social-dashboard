@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface IContainerProps {
   socialMedia: ISocialMedia;
+  footerColor: 'green' | 'red';
 }
 
 const headerColor = (socialMedia: ISocialMedia): string => {
@@ -11,14 +12,14 @@ const headerColor = (socialMedia: ISocialMedia): string => {
     case 'twitter':
       return '#178FF5';
     case 'instagram':
-      return 'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);';
+      return 'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 100%);';
     default:
       return '#FF1010';
   }
 };
 
 export const Container = styled.div<IContainerProps>`
-  width: 280px;
+  width: 100%;
   height: 280px;
 
   padding: 36px 12px;
@@ -30,8 +31,10 @@ export const Container = styled.div<IContainerProps>`
   flex-direction: column;
   justify-content: space-around;
 
+  cursor: pointer;
   overflow: hidden;
   position: relative;
+  transition: filter 200ms;
 
   .header {
     display: flex;
@@ -59,6 +62,19 @@ export const Container = styled.div<IContainerProps>`
     }
   }
 
+  .footer {
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    color: ${({ theme, footerColor }) =>
+      footerColor === 'green' ? theme.colors.green : theme.colors.red};
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
   &::after {
     position: absolute;
     content: '';
@@ -68,5 +84,9 @@ export const Container = styled.div<IContainerProps>`
     height: 5px;
 
     background: ${({ socialMedia }) => headerColor(socialMedia)};
+  }
+
+  &:hover {
+    filter: brightness(1.2);
   }
 `;

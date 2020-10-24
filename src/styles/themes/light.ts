@@ -5,8 +5,8 @@ const theme = {
     background: '#ffffff',
     header: '#f8f9fe',
     label: '#898d98',
-    green: '#30867b',
-    red: '#831e2c',
+    green: '#24D9A4',
+    red: '#FF4E5B',
   },
 };
 

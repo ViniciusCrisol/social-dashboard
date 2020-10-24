@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         <div className="switch-container">
           <span>{theme} mode</span>
           <Switch htmlFor="theme-switch" onClick={toggleTheme}>
-            <input type="checkbox" checked={theme === 'light'} />
+            <input type="checkbox" readOnly checked={theme === 'light'} />
             <span className="slider" />
           </Switch>
         </div>

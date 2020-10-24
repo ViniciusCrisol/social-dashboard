@@ -24,5 +24,56 @@
       "followers": 8265,
       "todayFollowers": -3
     }
+  ],
+  "content": [
+    {
+      "label": "Page Views",
+      "socialMedia": "facebook",
+      "quantity": 87,
+      "percent": 3
+    },
+    {
+      "label": "Likes",
+      "socialMedia": "facebook",
+      "quantity": 71,
+      "percent": -2
+    },
+    {
+      "label": "Retweets",
+      "socialMedia": "twitter",
+      "quantity": 711,
+      "percent": 305
+    },
+    {
+      "label": "Likes",
+      "socialMedia": "twitter",
+      "quantity": 11,
+      "percent": -4
+    },
+    {
+      "label": "Likes",
+      "socialMedia": "instagram",
+      "quantity": 221,
+      "percent": 222
+    },
+    {
+      "label": "Profile Views",
+      "socialMedia": "instagram",
+      "quantity": 5200,
+      "percent": 2212
+    },
+    {
+      "label": "Likes",
+      "socialMedia": "youtube",
+      "quantity": 200,
+      "percent": 2
+    },
+
+    {
+      "label": "Total Views",
+      "socialMedia": "youtube",
+      "quantity": 2230,
+      "percent": -2
+    }
   ]
 }
